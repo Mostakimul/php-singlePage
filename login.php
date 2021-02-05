@@ -1,82 +1,103 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Boostrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
-    <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@themepixels">
+  <meta name="twitter:creator" content="@themepixels">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Starlight">
+  <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="twitter:image" content="//themepixels.me/starlight/img/starlight-social.png">
 
-    
+  <!-- Facebook -->
+  <meta property="og:url" content="//themepixels.me/starlight">
+  <meta property="og:title" content="Starlight">
+  <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+  <meta property="og:image" content="//themepixels.me/starlight/img/starlight-social.png">
+  <meta property="og:image:secure_url" content="//themepixels.me/starlight/img/starlight-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+
+  <!-- Meta -->
+  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="author" content="ThemePixels">
+
+  <title>Starlight Responsive Bootstrap 4 Admin Template</title>
+
+  <!-- vendor css -->
+  <link href="backend/assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="backend/assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+
+
+  <!-- Starlight CSS -->
+  <link rel="stylesheet" href="backend/assets/css/starlight.css">
 </head>
+
 <body>
-    
-<form class="col-6" action="login-handle.php" method="post">
-      <h2 class="text-center font-weight-bolder">Login Form</h2>
-      <hr>
-      
 
-      <!-- Email Input field -->
-      <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control cstm-email" id="email" name="email" placeholder="Please Enter Your Email" aria-describedby="emailHelp">
+  <div class="d-flex align-items-center justify-content-center bg-sl-primary ht-100v">
 
-        <!-- Email Session -->
-        <span class="text-light">
+    <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white">
+      <div class="signin-logo tx-center tx-24 tx-bold tx-inverse">starlight <span class="tx-info tx-normal">admin</span></div>
+      <div class="tx-center mg-b-60">Professional Admin Template Design</div>
+
+      <form action="login-handle.php" method="post">
+        <div class="form-group">
+          <input type="text" name="email" class="form-control cstm-error" placeholder="Enter your username">
+          <!-- Email Session -->
+          <span class="text-danger">
             <?php
-              if (isset($_SESSION['email'])) {
-                echo $_SESSION['email'];
-                echo '<style>
-                  .cstm-email {
-                    border: 2px solid green;
+            if (isset($_SESSION['email'])) {
+              echo $_SESSION['email'];
+              echo '<style>
+                  .cstm-error {
+                    border: 2px solid red;
                   }
                 </style>';
-                unset($_SESSION['email']);
-              }
+              unset($_SESSION['email']);
+            }
             ?>
-        </span>
-      </div>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" placeholder="Enter your password">
+          <!-- Password Session -->
+          <span class="text-danger">
+            <?php
+            if (isset($_SESSION['password'])) {
+              echo $_SESSION['password'];
+              echo '<style>
+                      .cstm-error {
+                        border: 2px solid red;
+                      }
+                    </style>';
+              unset($_SESSION['password']);
+            }
+            ?>
+          </span>
+          <a href="" class="tx-info tx-12 d-block mg-t-10">Forgot password?</a>
+        </div><!-- form-group -->
+        <button style="cursor: pointer;" type="submit" class="btn btn-info btn-block">Sign In</button>
+      </form>
 
-      <!-- Password Input field -->
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control cstm-password" id="password" name="password" placeholder="Please Enter your password">
+      <div class="mg-t-60 tx-center">Not yet a member? <a href="register-form.php" class="tx-info">Sign Up</a></div>
+    </div><!-- login-wrapper -->
+  </div><!-- d-flex -->
 
-        <!-- Password Session -->
-        <span class="text-light">
-        <?php
-          if (isset($_SESSION['password'])) {
-            echo $_SESSION['password'];
-            echo '<style>
-                  .cstm-password {
-                    border: 2px solid green;
-                  }
-                </style>';
-                unset($_SESSION['password']);
-          }
-        ?>
-        </span>
-      </div>
+  <script src="backend/assets/lib/jquery/jquery.js"></script>
+  <script src="backend/assets/lib/popper.js/popper.js"></script>
+  <script src="backend/assets/lib/bootstrap/bootstrap.js"></script>
 
-      
-      <!-- Buttuon -->
-      <button name="submit" type="submit" class="btn btn-light mt-2 offset-5">Submit</button>
-    </form>
-
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <!-- Theme JS -->
-    <script src="./js/main.js"></script>
 </body>
+
 </html>
