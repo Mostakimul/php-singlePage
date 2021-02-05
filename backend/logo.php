@@ -19,7 +19,7 @@ $asc = mysqli_fetch_assoc($q);
     <div class="sl-pagebody">
         <!-- ####### Page Title Start ######  -->
         <div class="sl-page-title">
-            <?php echo $asc['total'] ?>
+
             <h5>Update Logo</h5>
             <p>A collection basic to advanced table design that you can use to your data.</p>
         </div>
@@ -91,7 +91,18 @@ $asc = mysqli_fetch_assoc($q);
                 <div class="card pd-20 pd-sm-40 form-layout form-layout-5">
                     <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Logo Preview</h6>
                     <div class="row row-xs">
-                        <img id="logo" width="170" height="170" src="<?= '../upload/logo/' . $asc['logo'] ?? '../assets/img/no-image.png' ?>" alt="no-image">
+                        <?php
+                        if ($asc['total'] > 0) {
+                        ?>
+                            <img id="logo" width="170" height="170" src="<?= '../upload/logo/' . $asc['logo'] ?>" alt="no-image">
+                        <?php
+                        } else {
+                        ?>
+                            <img id="logo" width="170" height="170" src="../assets/img/no-image.png" alt="no-image">
+                        <?php
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>
@@ -111,7 +122,7 @@ $asc = mysqli_fetch_assoc($q);
 
         if (in_array($ext, $allow_format)) {
 
-            if ($logo_image['size'] <= 30000) {
+            if ($logo_image['size'] <= 300000) {
                 $insert = "INSERT INTO settings(text_logo) VALUES('$text')";
                 $logo_query = mysqli_query($db, $insert);
 
