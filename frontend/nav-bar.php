@@ -1,5 +1,4 @@
 <?php
-require './db.php';
 $settings = "SELECT * FROM settings ORDER BY id DESC limit 1";
 $set_query = mysqli_query($db, $settings);
 $set_assoc = mysqli_fetch_assoc($set_query);
