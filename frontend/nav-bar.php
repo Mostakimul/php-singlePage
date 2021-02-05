@@ -5,7 +5,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img style="width:100%;" src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand page-scroll" href="#page-top"><img style="width:100%;" src="./assets/img/logo.png" alt="logo"></a>
             <div class="phone"><span>Call Today</span>320-123-4321</div>
         </div>
 

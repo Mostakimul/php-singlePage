@@ -336,7 +336,7 @@
   </div>
 
   <!-- Footer Section Start -->
-  <?php include 'hero-section.php'  ?>
+  <?php include 'footer.php'  ?>
   <!-- Footer Section End -->
 
 </body>
