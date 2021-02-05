@@ -1,3 +1,11 @@
+<?php
+require './db.php';
+$settings = "SELECT * FROM settings ORDER BY id DESC limit 1";
+$set_query = mysqli_query($db, $settings);
+$set_assoc = mysqli_fetch_assoc($set_query);
+?>
+
+
 <!-- Navigation
     ==========================================-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
@@ -5,8 +13,8 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img style="width:100%;" src="./assets/img/logo.png" alt="logo"></a>
-            <div class="phone"><span>Call Today</span>320-123-4321</div>
+            <a class="navbar-brand page-scroll" href="#page-top"><img style="width:50%;" src="./upload/logo/<?= $set_assoc['logo'] ?>" alt="logo"></a>
+            <div class="phone"><span>Call Today</span><?= $set_assoc['phone1'] ?></div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
