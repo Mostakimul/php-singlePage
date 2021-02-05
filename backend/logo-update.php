@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Fetch from database
             $select = "SELECT * FROM settings WHERE id= $id";
-
             $que = mysqli_query($db, $select);
             $assc = mysqli_fetch_assoc($que);
 
@@ -42,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $q_update = mysqli_query($db, $up);
             $new_location = '../upload/logo/' . $image_name;
             move_uploaded_file($logo_image['tmp_name'], $new_location);
+            header('location:logo.png');
         } else {
             echo 'Max size 3MB';
         }

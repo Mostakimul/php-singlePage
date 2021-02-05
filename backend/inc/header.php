@@ -80,7 +80,7 @@ require '../db.php'
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
           <li class="nav-item"><a href="./logo.php" class="nav-link">Logo</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="./contact.php" class="nav-link">Contact</a></li>
         </ul>
         <!-- sl-menu-link -->
         <a href="widgets.html" class="sl-menu-link">

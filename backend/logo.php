@@ -4,9 +4,6 @@ include 'inc/header.php';
 $select = "SELECT COUNT(*) as total, id, logo, text_logo FROM settings";
 $q = mysqli_query($db, $select);
 $asc = mysqli_fetch_assoc($q);
-
-
-
 ?>
 
 <!-- ########## START: MAIN PANEL ########## -->
@@ -134,6 +131,9 @@ $asc = mysqli_fetch_assoc($q);
 
                 $update_logo = "UPDATE settings SET logo = '$image_name' WHERE id = $last_id";
                 $up_query = mysqli_query($db, $update_logo);
+                if ($up_query) {
+                    header('location:logo.png');
+                }
             } else {
                 echo 'Max size 3MB';
             }
