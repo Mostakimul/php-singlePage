@@ -104,10 +104,21 @@ require '../db.php'
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-          <li class="nav-item"><a href="./about-us.php" class="nav-link"> <i class="fa fa-list"></i> About</a></li>
+          <li class="nav-item"><a href="./about-us.php" class="nav-link"> <i class="fa fa-list"></i> About Us</a></li>
           <li class="nav-item"><a href="./about-add.php" class="nav-link"> <i class="fa fa-plus"></i> New About</a></li>
         </ul>
 
+        <a href="#" class="sl-menu-link">
+          <div class="sl-menu-item">
+            <i class="menu-item-icon icon fa fa-briefcase tx-24"></i>
+            <span class="menu-item-label">Portfolio</span>
+            <i class="menu-item-arrow fa fa-angle-down"></i>
+          </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+          <li class="nav-item"><a href="./portfolio-list.php" class="nav-link"> <i class="fa fa-list"></i> Portfolio List</a></li>
+          <li class="nav-item"><a href="./portfolio-add.php" class="nav-link"> <i class="fa fa-plus"></i> New Portfolio</a></li>
+        </ul>
 
         <!-- sl-menu-link -->
         <a href="widgets.html" class="sl-menu-link">
