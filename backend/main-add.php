@@ -47,6 +47,13 @@ include 'inc/header.php';
                             </div>
                         </div><!-- row -->
 
+                        <div class="row mg-t-20">
+                            <label class="col-sm-4 form-control-label">Banner: <span class="tx-danger">*</span></label>
+                            <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                                <input type="file" class="form-control" name="banner">
+                            </div>
+                        </div><!-- row -->
+
 
                         <div class="form-layout-footer mg-t-30">
                             <button style="cursor: pointer;" type="submit" class="btn btn-info mg-r-5">Submit</button>

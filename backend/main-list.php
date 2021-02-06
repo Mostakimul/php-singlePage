@@ -26,6 +26,7 @@
                             <th>Title</th>
                             <th>Summary</th>
                             <th>Button Text</th>
+                            <th>Banner</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -40,6 +41,7 @@
                                 <td><?= $value['title'] ?></td>
                                 <td><?= $value['summary'] ?></td>
                                 <td><?= $value['button'] ?></td>
+                                <td><img style="width: 200px;" src="../upload/banner/<?= $value['banner']  ?>" alt=""></td>
                                 <td>
                                     <a herf="#" class="btn btn-info text-light">Edit</a>
                                     <a herf="#" class="btn btn-danger text-light">Trash</a>
