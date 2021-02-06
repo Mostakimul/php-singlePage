@@ -1,7 +1,8 @@
 <!-- Footer Section -->
 <div id="footer">
     <div class="container text-center">
-        <p>&copy; 2017 INNOVA. Design by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+        <p>&copy; <?php echo date('Y'); ?> INNOVA. Design by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a>
+        </p>
     </div>
 </div>
 <script type="text/javascript" src="assets/js/jquery.1.11.1.js"></script>
