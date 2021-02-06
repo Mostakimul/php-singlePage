@@ -66,6 +66,19 @@ require '../db.php'
           <span class="menu-item-label">Dashboard</span>
         </div><!-- menu-item -->
       </a><!-- sl-menu-link -->
+
+      <a href="#" class="sl-menu-link">
+        <div class="sl-menu-item">
+          <i class="menu-item-icon icon fa fa-diamond tx-24"></i>
+          <span class="menu-item-label">Main Hero</span>
+          <i class="menu-item-arrow fa fa-angle-down"></i>
+        </div><!-- menu-item -->
+      </a><!-- sl-menu-link -->
+      <ul class="sl-menu-sub nav flex-column">
+        <li class="nav-item"><a href="./main-list.php" class="nav-link"> <i class="fa fa-list"></i> Main List</a></li>
+        <li class="nav-item"><a href="./main-add.php" class="nav-link"> <i class="fa fa-plus"></i> New Main</a></li>
+      </ul>
+
       <a href="user-list.php" class="sl-menu-link">
         <div class="sl-menu-item">
           <i class="menu-item-icon icon ion-ios-person-outline tx-20"></i>
