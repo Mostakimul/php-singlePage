@@ -48,14 +48,22 @@ $set_assoc = mysqli_fetch_assoc($set_query);
                 <p><span>Email: </span> <?= $set_assoc['email'] ?></p>
             </div>
         </div>
+        <?php
+        $social = "SELECT * FROM social";
+        $social_query = mysqli_query($db, $social);
+        // $social_assoc = mysqli_fetch_assoc($social_query);
+        ?>
         <div class="col-md-12">
             <div class="row">
                 <div class="social">
                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <?php
+                        foreach ($social_query as $key => $soc) {
+                        ?>
+                            <li><a href="<?= $soc['link'] ?>"><i class="<?= $soc['icon'] ?>"></i></a></li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>
