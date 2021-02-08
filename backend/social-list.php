@@ -1,4 +1,10 @@
-<?php include 'inc/header.php'; ?>
+<?php
+include 'inc/header.php';
+// Select For View List
+$select = "SELECT * FROM social";
+$user_query = mysqli_query($db, $select);
+
+?>
 
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="sl-mainpanel">
@@ -17,6 +23,25 @@
 
         <!-- ####### Table Start ######  -->
         <div class="card pd-20 pd-sm-40">
+            <!-- Session for Deleted User -->
+            <?php
+            if (isset($_SESSION['delete'])) {
+            ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong class="text-dark">
+                        <?php
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                        ?>
+                    </strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true" class="text-dark">&times;</span>
+                    </button>
+                </div>
+            <?php
+            }
+
+            ?>
 
             <div class="table-responsive">
                 <table class="table table-bordered mg-b-0" id="myTable">
@@ -31,8 +56,6 @@
                     </thead>
                     <tbody>
                         <?php
-                        $select = "SELECT * FROM social";
-                        $user_query = mysqli_query($db, $select);
                         foreach ($user_query as $key => $value) {
                         ?>
                             <tr>
@@ -41,8 +64,8 @@
                                 <td><?= $value['link'] ?></td>
                                 <td><?= $value['icon'] ?></td>
                                 <td>
-                                    <a href="socail-edit.php?id=<?php echo $value['id'] ?>" class="btn btn-info text-light">Edit</a>
-                                    <a href="#" class="btn btn-danger text-light">Trash</a>
+                                    <a href="social-edit.php?id=<?php echo $value['id'] ?>" class="btn btn-info text-light">Edit</a>
+                                    <a href="social-delete.php?id=<?php echo $value['id'] ?>" class="btn btn-danger text-light">Delete</a>
                                 </td>
                             </tr>
                         <?php
