@@ -41,8 +41,8 @@
                                 <td><?= $value['link'] ?></td>
                                 <td><?= $value['icon'] ?></td>
                                 <td>
-                                    <a herf="#" class="btn btn-info text-light">Edit</a>
-                                    <a herf="#" class="btn btn-danger text-light">Trash</a>
+                                    <a href="socail-edit.php?id=<?php echo $value['id'] ?>" class="btn btn-info text-light">Edit</a>
+                                    <a href="#" class="btn btn-danger text-light">Trash</a>
                                 </td>
                             </tr>
                         <?php
